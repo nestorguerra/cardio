@@ -1,5 +1,2 @@
-# Cardio Toolbox
-Calculadoras de riesgo cardiovascular para cardiólogos.
-Incluye: CHA2DS2-VASc, HAS-BLED, Killip-Kimball y GRACE.
-
-Abre index.html en tu navegador móvil o escritorio.
+# Cardio Toolbox SAC 2025
+Aplicación oficial de calculadoras para el XXXII Reunión Científica de la SAC, realizada con IA.

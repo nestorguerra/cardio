@@ -1,83 +1,145 @@
 :root {
-  --primary: #9E1B32;
+  --primary: #9e1b32;
+  --secondary: #fff6fa;
+  --accent: #f3c7d3;
   --bg: #f9f9fb;
-  --card: #ffffff;
-  --shadow: rgba(0,0,0,0.07);
+  --card: rgba(255,255,255,0.88);
+  --glass: rgba(255,255,255,0.60);
+  --shadow: 0 8px 28px rgba(158,27,50,0.12);
+  --blur: blur(7px);
 }
 body {
   margin: 0;
-  background: var(--bg);
+  background: linear-gradient(120deg, #fff6fa 0%, #f0f4ff 100%);
   color: #222;
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'SF Pro Text', 'Segoe UI', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
 }
-header {
-  background: var(--primary);
+.banner {
+  background: linear-gradient(95deg, #9e1b32 70%, #f3c7d3 100%);
+  box-shadow: var(--shadow);
+  padding: 1.1rem 0 1.2rem 0;
+  position: sticky;
+  top: 0; left: 0; width: 100%;
+  z-index: 100;
+}
+.banner-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 710px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.sac-logo {
+  height: 48px; width: 48px;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(255,255,255,0.18);
+  background: #fff;
+  object-fit: contain;
+  margin-right: 0.7rem;
+}
+.main-title {
+  font-weight: 700;
+  font-size: 1.12rem;
+  letter-spacing: 0.01em;
   color: #fff;
-  padding: 1rem;
-  text-align: center;
+}
+.small {
+  color: #fff;
+  font-size: 0.82rem;
+  opacity: 0.88;
+  font-weight: 400;
+}
+.subtitle {
+  color: #ffe7f0;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 .container {
-  width: 100%;
-  max-width: 720px;
-  margin: auto;
-  padding: 1rem;
+  max-width: 550px;
+  margin: 2.2rem auto 2.8rem auto;
+  padding: 0 0.3rem;
 }
 .card {
-  background: var(--card);
-  border-radius: 0.8rem;
-  padding: 1rem 1.5rem;
-  margin-bottom: 1.25rem;
-  box-shadow: 0 2px 12px var(--shadow);
+  background: var(--glass);
+  backdrop-filter: var(--blur);
+  border-radius: 1.2rem;
+  padding: 1.3rem 1.3rem 1.1rem 1.3rem;
+  margin-bottom: 1.55rem;
+  box-shadow: 0 2px 16px rgba(158,27,50,0.07), 0 1px 4px rgba(0,0,0,0.05);
+  border: 1.5px solid #f3c7d3;
+  transition: box-shadow 0.18s;
 }
 h2 {
   color: var(--primary);
-  margin-top: 0;
+  margin-top: 0.1em;
+  font-size: 1.22rem;
+  font-weight: 700;
 }
 label {
   display: block;
-  margin: 0.6rem 0 0.2rem;
-  font-weight: 600;
+  margin: 0.85rem 0 0.3rem;
+  font-weight: 500;
+  font-size: 1rem;
 }
 input[type="number"], select {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #bbb;
-  border-radius: 0.5rem;
-  font-size: 1rem;
+  padding: 0.7rem;
+  border: 1.2px solid #d7c0c8;
+  border-radius: 0.8rem;
+  font-size: 1.05rem;
+  background: #fff8fc;
+  box-shadow: 0 1px 4px #f3c7d375;
 }
 button {
-  margin-top: 0.8rem;
-  padding: 0.6rem 1rem;
+  margin-top: 1.15rem;
+  padding: 0.74rem 1.5rem;
   border: none;
-  border-radius: 0.5rem;
-  background: var(--primary);
+  border-radius: 1rem;
+  background: linear-gradient(90deg, #9e1b32 70%, #be618b 100%);
   color: #fff;
-  font-size: 1rem;
-  transition: background 0.15s;
+  font-size: 1.08rem;
+  font-weight: 600;
+  box-shadow: 0 1px 5px #f3c7d375;
+  transition: filter 0.15s, background 0.18s;
 }
-button:hover {
-  background: #7a1224;
-}
+button:active { filter: brightness(0.93); }
 .result {
   font-weight: 700;
-  margin-top: 0.7rem;
-  font-size: 1.1rem;
+  margin-top: 1.05rem;
+  font-size: 1.18rem;
+  color: #872040;
+}
+h4 {
+  margin-top: 1.8rem;
+  color: #7d233a;
 }
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
-  font-size: 0.94rem;
+  margin-top: 0.6rem;
+  font-size: 0.97rem;
 }
 th, td {
-  padding: 0.42rem 0.7rem;
-  border-bottom: 1px solid #e2e2e2;
+  padding: 0.45rem 0.7rem;
+  border-bottom: 1px solid #f6dbe6;
   text-align: left;
 }
-th {
-  background: #f2f2f2;
+th { background: #fff0f5; color: #9e1b32; }
+footer {
+  text-align: center;
+  color: #9e1b32;
+  font-size: 0.95rem;
+  padding: 1.7rem 0 1.2rem 0;
+  letter-spacing: 0.02em;
 }
 @media (max-width:600px) {
-  .container { padding: 0.2rem; }
-  .card { padding: 0.8rem; }
+  .container { padding: 0.08rem; margin-top: 0.8rem; }
+  .card { padding: 1rem 0.6rem; }
+  .banner-content { flex-direction: column; align-items: flex-start; }
+  .main-title { font-size: 1.01rem; }
+  .subtitle { font-size: 0.82rem;}
+  .sac-logo { height: 38px; width: 38px;}
 }
